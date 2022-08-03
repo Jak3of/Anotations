@@ -1,5 +1,6 @@
 # git
-
+### hay 3 estados donde son: Stage , Commit , server(Push)
+---
 ## comandos simples 
 
 ### Indicar la carpeta
@@ -17,6 +18,9 @@
 ### crear archivo en cmd (no powershell)
 >copy pon miarchivo.miextencion
 
+### eliminar archivo o directorio en terminal
+>rm miarchivo.miextencion
+---
 ## Etapa Stage
 
 ### añadir achivos creados , borrados o modificados
@@ -24,10 +28,11 @@
 
 ### estado de git
 >git status
+---
+## Comprometer el proyecto
+>git commit -m "first commit"
 
-
-
-
+### 
 
 
 
