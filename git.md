@@ -1,7 +1,7 @@
-# git
+# **git**
 ### hay 3 estados donde son: Stage , Commit , server(Push)
 ---
-## comandos simples 
+## *comandos simples*
 
 ### Indicar la carpeta
 >cd Anotations, cd .. ,cd . , etc
@@ -28,7 +28,7 @@
 >mv miarchivo.miextencion miarchivo.miextend
 
 ---
-# Etapa Stage
+# **Etapa Stage**
 
 ### añadir achivos creados , borrados o modificados
 >git add miarchivo.miextend miarchivo2.miextend ...
@@ -36,10 +36,10 @@
 ### estado de git
 >git status
 ---
-# Comprometer el proyecto
+# **Comprometer el proyecto**
 >git commit -m "first commit"
 ---
-# restaurar en la etapa stage
+## *restaurar en la etapa stage*
 >git restore --stage miarchivo.miextend
 
 ## restaurar en toda etapa
@@ -51,11 +51,11 @@
 ---
 ---
 ---
-# archivos como sql o configuraciones en local
+# **archivos como sql o configuraciones en local y .gitignore**
 >copy pon .miarchivo
 
 >copy pon .gitignore
-### dentro de .git ignore
+## dentro de .gitignore
 >.miarchivo
 
 >micarpeta/
@@ -63,7 +63,7 @@
 ---
 ---
 ---
-# Viendo estado
+# **Viendo estado**
 >git status -s
 
 ## Viendo estado mas visual
@@ -75,7 +75,7 @@
 
 ---
 
-## visualizando rama
+# **visualizando rama**
 >git branch
 
 ## agregando branch y cambiando hacia ramab
@@ -83,3 +83,11 @@
 
 ## vizualizar un archivo en texto
 >cat miarchivo
+
+## cambiar de rama
+>git checkout main
+## *traer cambios de ramab -> main*
+>git merge ramab
+---
+
+
