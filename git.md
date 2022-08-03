@@ -6,6 +6,9 @@
 ### Indicar la carpeta
 >cd Anotations, cd .. ,cd . , etc
 
+### abrir con Visual Code
+>code . , code miarchivo.miextencion , etc
+
 ### Indicar la ruta actual
 >pwd
 
@@ -20,19 +23,39 @@
 
 ### eliminar archivo o directorio en terminal
 >rm miarchivo.miextencion
+
+## renombrar archivos
+>mv miarchivo.miextencion miarchivo.miextend
+
 ---
 ## Etapa Stage
 
 ### añadir achivos creados , borrados o modificados
->git add miarchivo.miextend miarchivo2.miextend
+>git add miarchivo.miextend miarchivo2.miextend ...
 
 ### estado de git
 >git status
 ---
 ## Comprometer el proyecto
 >git commit -m "first commit"
+---
+## restaurar en la etapa stage
+>git restore --stage miarchivo.miextend
 
-### 
+## restaurar en toda etapa
+>git restaure miarchivo.miextend
+---
+## renombrar archivos agregados a stage automaticamente
+>git mv miarchivo.miextend archivo.miextend
 
+---
+---
+---
+# archivos como sql o configuraciones en local
+>copy pon .miarchivo
 
+>copy pon .gitignore
+### dentro de .git ignore
+>.miarchivo
 
+>micarpeta/
