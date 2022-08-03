@@ -28,7 +28,7 @@
 >mv miarchivo.miextencion miarchivo.miextend
 
 ---
-## Etapa Stage
+# Etapa Stage
 
 ### añadir achivos creados , borrados o modificados
 >git add miarchivo.miextend miarchivo2.miextend ...
@@ -36,10 +36,10 @@
 ### estado de git
 >git status
 ---
-## Comprometer el proyecto
+# Comprometer el proyecto
 >git commit -m "first commit"
 ---
-## restaurar en la etapa stage
+# restaurar en la etapa stage
 >git restore --stage miarchivo.miextend
 
 ## restaurar en toda etapa
@@ -59,3 +59,27 @@
 >.miarchivo
 
 >micarpeta/
+
+---
+---
+---
+# Viendo estado
+>git status -s
+
+## Viendo estado mas visual
+>git diff
+
+>git diff --staged
+
+>git log --oneline
+
+---
+
+## visualizando rama
+>git branch
+
+## agregando branch y cambiando hacia ramab
+>git checkout -b ramab
+
+## vizualizar un archivo en texto
+>cat miarchivo
