@@ -88,6 +88,10 @@
 >git checkout main
 ## *traer cambios de ramab -> main*
 >git merge ramab
+
+## borrar rama en local
+>git branch -d nelson
+
+## borrar rama en remoto
+>git push origin --delete nelson
 ---
-
-
