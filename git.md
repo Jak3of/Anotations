@@ -97,7 +97,7 @@
 ---
 
 
-## actualizando en local sobre elremoto
+# actualizando en local sobre elremoto
 >git fetch origin
 
 ## actualizando el local como en el remoto
