@@ -95,3 +95,10 @@
 ## borrar rama en remoto
 >git push origin --delete nelson
 ---
+
+
+## actualizando en local sobre elremoto
+>git fetch origin
+
+## actualizando el local como en el remoto
+>git pull origin main
