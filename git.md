@@ -98,7 +98,21 @@
 
 
 # actualizando en local sobre elremoto
+## (incorporar los cambios de las confirmaciones remotas más recientes.)
 >git fetch origin
 
-## actualizando el local como en el remoto
+## actualizando el local como en el remoto al main local
 >git pull origin main
+
+
+## fusionar en local ramab -> main
+>git merge ramab
+
+## actualizando el main
+>git push -u origin main
+
+# borrar ramas locales
+>git branch -d ramab
+
+## borrar ramas remotas
+>git push origin --delete ramab
