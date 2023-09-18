@@ -18,9 +18,9 @@
     font-family: "WebSymbolsRegular";
     src: url('fonts/websymbols-regular-webfont.eot');
     src: url('fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/websymbols-regular-webfont.woff') format('woff'),
-         url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
-         url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+        url('fonts/websymbols-regular-webfont.woff') format('woff'),
+        url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
+        url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -29,23 +29,26 @@
 /*GENERALES*/
 
 
-*{
+* {
     margin: 0px;
     padding: 0px;
 
 }
 
-body{
+body {
     background: url("../img/pattern.png");
 }
 
-.wrap{
-    width: 62.5%/*1200px*/;
+.wrap {
+    width: 1250px
+        /*1200px*/
+    ;
     margin: 0px auto;
 }
 
 
-.gear, .icon {
+.gear,
+.icon {
     font-family: 'WebSymbolsRegular';
 }
 
@@ -53,7 +56,7 @@ body{
 
 /*CABECERA*/
 
-#header{
+#header {
     width: 100%;
     height: 70px;
     background-color: black;
@@ -62,7 +65,7 @@ body{
 
 }
 
-#logo{
+#logo {
     float: left;
     width: 200px;
     background-color: #37bcf9;
@@ -75,7 +78,7 @@ body{
     margin-left: 20px;
 }
 
-#logo h3{
+#logo h3 {
     display: block;
     float: right;
     font-size: 40px;
@@ -84,7 +87,7 @@ body{
     transition: all 300ms;
 }
 
-#logo .gear{
+#logo .gear {
     display: block;
     float: left;
     font-size: 30px;
@@ -92,7 +95,7 @@ body{
     margin-left: 20px;
 }
 
-#menu{
+#menu {
     float: right;
     margin-right: 15%;
     height: 70px;
@@ -109,25 +112,25 @@ body{
     line-height: 75px;
 }
 
-#menu ul li a{
+#menu ul li a {
     display: block;
     text-decoration: none;
     transition: all 200ms;
 
     color: white;
-    
+
 }
 
-#menu ul li a:hover{
+#menu ul li a:hover {
     color: #37bcf9;
-    transform: scale(1.2,1.2);
-    
+    transform: scale(1.2, 1.2);
+
 }
 
 
 /*BANNER*/
 
-#banner{
+#banner {
     width: 95.6%;
     height: 100px;
     border: 10px solid white;
@@ -139,8 +142,8 @@ body{
 }
 
 
-#banner h1{
-    display:block;
+#banner h1 {
+    display: block;
     width: 850px;
     font-family: 'BebasNeue';
     color: white;
@@ -150,4 +153,82 @@ body{
     margin: 27px auto;
     font-weight: normal;
     text-shadow: 2px 2px 1px black;
+}
+
+/* TARJETAS */
+
+.card {
+    overflow: hidden;
+    margin: 22px;
+    margin-top: 40px;
+    
+    width: 204px;
+    height: 305px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ccc;
+    float: left;
+    cursor: pointer;
+    background: white;
+
+
+}
+
+.card:last-child{
+    margin-right: 0px;
+}
+
+.card .icon{
+    display: block;
+    width: 100%;
+    height: 130px;
+    font-size: 50px;
+    line-height: 110px;
+    text-align: center;
+    margin: 0px auto;
+
+}
+
+.card .category{
+    width: 100%;
+    height: 50px;
+    font-family: "TrebuchetMS";
+
+    font-size: 21px;
+    font-weight:bold;
+    text-align: center;
+    color: #00538c;
+}
+
+.card .description{
+    text-align: center;
+    color: #0370b9;
+    font-family: "TrebuchetMS";
+    font-size: 15px;
+
+}
+
+/*BARRA LATERAL*/
+
+#lateral{
+    width: 300px;
+    min-height: 1200px;
+    font-family: "TrebuchetMS";
+    float: right;
+}
+
+aside h3{
+    display: block;
+    width: auto;
+    height: 45px;
+    line-height: 49px;
+    background: url("../img/pxgray.png"), white;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f,2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+
+    font-size: 30px;
+    font-family: "BebasNeue";
+    font-weight: normal;
+    letter-spacing: 2px;
+    padding-left: 15px;
+    margin-top:  30px;
+    margin-bottom: 15px;
 }
