@@ -1,0 +1,304 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+#container{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    border: 1px solid rgb(225, 225, 226, 0.8);
+
+    box-shadow: 0px 0px 10px #ccc;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height: 700px;
+
+    
+}
+
+#header{
+    display: flex;
+    flex-flow: row wrap;
+
+    align-items: center;
+
+    height: 120px;
+    border-bottom: 1px solid rgb(225, 225, 226, 0.8);
+}
+
+.logo{
+    flex-basis: 65%;
+    
+    padding: 10px;
+    margin-left: 20px;
+    color: black;
+    text-shadow: 1px 1px 0px #ccc;
+    text-transform: uppercase;
+}
+
+.logo h1{
+    font-family: Helvetica;
+    font-size: 35px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+#menu{
+    flex-basis: 30%;
+    flex-grow: 1;
+    height: 100%;
+    padding-right: 20px;
+}
+
+
+
+#menu > ul{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    
+    
+}
+
+
+#menu a{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px;
+    color: #444;
+    transition: all 300ms;
+
+}
+
+
+
+#menu a:hover{
+    background: rgb(225, 225, 226, 0.8);
+    color: black;
+    border-radius: 5px;
+}
+
+
+
+#content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+#projects{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-basis: 80%;
+
+    
+}
+
+
+.project{
+    flex-grow: 1;
+    flex-basis: 250px;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    
+}
+
+.project img{
+    width: 100%;
+    
+}
+
+.project-info{
+    padding: 10px;
+}
+
+.project-info a{
+    color: #444;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 300ms;
+}
+
+
+.project-info a:hover{
+    color: green;
+
+}
+
+.project-info p{
+    font-size: 16px;
+    color: grey;
+}
+
+#aside {
+    flex-basis: 15%;
+    margin-right: 30px;
+    padding: 15px;
+
+    display: flex;
+    flex-flow: column wrap;
+    
+}
+
+
+#aside h2{
+    display: block;
+    width: 100%;
+    color: #444;
+    
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid rgb(225, 225, 226, 0.8);
+
+}
+
+#aside ul li{
+    padding-bottom: 20px;
+
+}
+
+#aside ul li a{
+    display: block;
+    padding: 20px;
+    text-align: center;
+    background: #eee;
+    color: #444;
+    transition: all 300ms;
+    text-transform: uppercase;
+
+}
+
+#aside ul li a:hover{
+    background: #444;
+    color: #eee;
+    border-radius: 5px;
+}
+
+
+#footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 120px;
+    
+    border-top: 1px solid rgb(225, 225, 226, 0.8);
+}
+
+#footer .logo{
+    order: 2;
+    margin-right: 20px;
+}
+
+#footer .logo h1{
+    opacity: 0.5;
+    flex-basis: auto;
+    flex-grow: 1;
+    
+    text-align: right;
+}
+
+#footer .info{
+    flex-grow: 1;
+    order: 1;
+    margin-left: 20px;
+    color: #444;
+}
+
+
+@media (max-width: 1334px){
+
+    #header {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+
+    #menu > ul{
+        align-items: flex-start;
+        justify-content: space-evenly;
+        
+    }
+}
+
+
+@media (max-width: 708px){
+
+
+    
+
+
+    #content{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #aside{
+        margin-right: 0px;
+
+    }
+
+    #aside ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+
+    .project{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+
+
+    #footer .logo{
+        order: 1;
+        margin-right: 0;
+        text-align: center;
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
+
+    #footer .logo h1{
+        
+        
+        text-align: center;
+    }
+
+    #footer .info{
+        order: 2;
+        margin-left: 20px;
+        text-align: center;
+        color: #444;
+        flex-basis: 100%;
+        flex-grow: 1;
+        margin: 0;
+    }
+
+}
+
+
+
