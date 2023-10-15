@@ -1,0 +1,121 @@
+
+
+
+body{
+
+    /* variables */
+    --rojo: red;
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+#layout{
+
+    display: flex;  /* como float left pero solo al contenedor, se colocarian con justificacion */
+
+    /* display: inline-flex; es centrado pero se adapta al contenidoal centro */
+
+
+    /*  direction podria ser row (en fila ) column (en columnas ) en row-reverse (en fila a la derecha)  column-reverse (en columna invertida)*/
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+
+    /*   hace lo mismo en una sola linea flow*/
+    flex-flow: row wrap;
+
+
+    justify-content: space-around;
+
+
+    height: 600px;
+
+    align-items: flex-start;
+    /*  align-items: flex-start; */
+    /*  align-items: flex-end; */
+    /*  align-items: center; */
+    /*  align-items: baseline; */
+    /*  align-items: stretch; */
+
+
+    border: 3px solid black;
+    padding: 5px;
+}
+
+
+
+.caja{
+
+
+
+
+
+    /* es responsive y ocupa todo el espacio de cada caja  flex-grow: 1;*/
+    /* comparten espacio con la caja*/
+    /* flex-grow: 1; */
+
+    /* spacing */
+
+
+    /* float left se sale del contenedor por ello no se coloca para mas rapides */
+
+    /* NO WIDTH*/
+    
+    font-size: 20px;
+    font-weight: bold;
+    border: 4px solid #222;
+    background: grey;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    
+}
+
+/* clases unicas*/
+
+.red{
+
+    align-self: flex-start;
+
+    /* flex-grow: 25; */
+    background: var(--rojo);
+    /* order: 1;   los contenedores unicos*/
+}
+
+.green{
+
+    align-self: center;
+    margin-top: -11%;
+    /*  clac para hacer calculos en css*/
+    /* flex-basis: calc((100% / 3) -68px); */
+
+    background: green;
+    
+    /* flex-grow: 7; */
+}
+
+.blue{
+
+    align-self: center;
+    margin-top: 11%;
+    background: blue;
+    /* flex-grow: 7; */
+    
+}
+.orange{
+
+    align-self: flex-end;
+
+    /* se le da tamaño para la base de la caja unica*/
+
+    /* flex-basis: 100%; */
+    /*   flex-shrink: 0; reduce la caja */
+    /* flex-grow: 1; */
+    background: orange;
+    
+}
+
+
+
