@@ -1,0 +1,146 @@
+body{
+    text-align: center;
+    
+}
+
+
+.layout{
+
+    width : 1200px;
+    height : 700px;
+    margin: 0 auto;
+    
+    border: 3px solid orangered;
+
+    /* display: grid; define el grid en el contenedor layout */
+    /* que tambien es responsivo */
+    display: grid;
+    
+    /* grid-gap: 10px; define el espaciado entre las cajas */
+    grid-gap: 10px;
+
+
+    /* cada contenedor las columnas y las filas se definen por grid-template-columns y grid-template-rows */
+
+    /* como crear las columnas */
+
+    /* grid-template-columns: 50% 50%; define el tamaño de las columnas y cuantas columnas queremos en el contenedor layout */
+    /* grid-template-columns: 50% 25% 15% 5%;  los porcentajes dependen del contenido de las columnas ya que se adaptan al tamaño de la caja */
+    /* grid-template-columns: repeat(4, calc(25% - 10px)); */
+    grid-template-columns: repeat(3, 1fr); /* son 2 o 4 columnas de 1 fraccion de 25% */
+
+    /* como crear las filas */
+    /* grid-template-rows: 50% 50%; define el tamaño de las filas y cuantas filas queremos en el contenedor layout */
+
+    grid-template-rows: repeat(2, 1fr) 3fr repeat(2, 1fr);  
+
+
+
+
+
+}
+
+.layout .caja{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    margin: 5px;
+    background-color: gray;
+
+
+
+}
+
+/*
+    la matriz de las lineas se define asi:
+    1   2   3   4
+      c   c   c
+    2
+      c   c   c
+    3
+      c   c   c
+    4
+
+    y si quieres de 2x3 es:
+    1   2   3
+      c   c
+    2
+      c   c
+    3
+      c   c
+    4
+
+    y si quiero de 3x5 es:
+    1   2   3   4
+      c   c   c
+    2
+      c   c   c
+    3
+      c   c   c
+    4
+      c   c   c
+    5
+      c   c   c
+    6
+
+    */
+
+
+.layout .red{
+    background-color: red;
+
+    
+
+
+    /*  grid-column-start: 1; grid-column-end: 3; se utiliza para expandir las columnas 
+    en el contenedor definiendo las lineas de inicio y fin de las columnas para que se expandan */
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.layout .green{
+    background-color: green;
+
+    /* grid-column: 1 / 3; se utiliza para definir la linea de inicio y fin de las columnas mas rapido que grid-column-start y grid-column-end*/
+    grid-column: 1 / 2;
+
+    grid-row: 2 / 6;
+}
+
+.layout .blue{
+    background-color: blue;
+
+    grid-column: 2 / 4;
+    
+}
+
+.layout .pink{
+    background-color: pink;
+
+    
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+}
+
+.layout .orange{
+    background-color: orange;
+    grid-row: 3 / 5;
+    
+}
+
+.layout .lightblue{
+    background-color: lightblue;
+    grid-column: 2 / 4;
+}
+
+
+
+/*  GRIDS solo actua dentro de la etiqueta que lo contiene */
+
+
+
+
+
+
