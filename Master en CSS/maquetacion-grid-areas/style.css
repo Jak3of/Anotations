@@ -1,0 +1,127 @@
+body{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+
+
+
+
+/*  GRIDS solo actua dentro de la etiqueta que lo contiene */
+
+
+
+/* WEBSITE PRINCIPAL */
+
+#website *{
+    margin: 0px;
+    padding: 0px;
+}
+
+#website{
+
+    grid-column-gap: 25px;
+
+    width: 75%;
+    height: 100vh;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 70px;
+    grid-template-areas: 
+    "cabecera cabecera cabecera cabecera cabecera"
+    "menu menu menu menu menu"
+    "lateral articulo articulo articulo articulo"
+    "pie-pagina pie-pagina pie-pagina pie-pagina pie-pagina";
+
+
+    /*
+    esto hace que sea una matriz de 5x4 que 
+    se identifica por lineas de los bordes, refecenciado como:
+    1   2   3   4   5   6
+      c   c   c   c   c
+    2
+      m   m   m   m   m
+    3
+      l   a   a   a   a
+    4
+      p   p   p   p   p
+    5
+    */
+}
+
+#cabecera{
+    grid-area: cabecera;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: blue;
+    color: white;
+
+    
+}
+
+
+
+#menu{
+    grid-area: menu;
+    background-color: lightblue;
+    color: black;
+   
+    
+    line-height: 70px;
+    
+}
+
+#menu ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+}
+#menu ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+#contenido{
+    grid-area: articulo;
+    background-color: #eee;
+    
+
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    grid-gap: 25px;
+}
+
+#contenido article{
+    
+    
+    background: #ccc;
+    border: 1px solid #555;
+    
+    padding: 10px;
+}
+
+
+
+#lateral{
+    grid-area: lateral;
+    background-color: orange;
+    color: white;
+}
+
+#pie-pagina{
+    grid-area: pie-pagina;
+    background-color: black;
+    color: white;
+
+}
