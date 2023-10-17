@@ -1,0 +1,32 @@
+#menu{
+    height: 50px;
+}
+
+a *{
+    text-decoration: none;
+}
+
+#menu ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+.item{
+    height: 150px;
+}
+
+footer{
+    height: 50px;
+    line-height: 50px;
+}
+
+.lateral{
+    height: 350px;
+}
+
+.lateral > div{
+    height: calc(100% / 3);
+}
+
+
+
