@@ -93,9 +93,22 @@
 
 
 
-        </div>
-        <div class="row">
-            <div id="slider" class=" col-8 carousel slide mb-3 mx-0" data-bs-ride="carousel">
+
+
+
+            <div class="col-8 mt-2 ">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Desarrollo Web</a></li>
+                        <li class="breadcrumb-item"><a href="#">Componentes</a></li>
+                    </ol>
+                </nav>
+
+
+            </div>
+
+            <div id="slider" class=" col-8 carousel slide mb-3" data-bs-ride="carousel">
                 <!-- carrusel -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -121,45 +134,48 @@
                     </div>
                 </div>
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true"
-                        aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    
+
                 </div>
-    
+
                 <!-- controles del carrusel -->
-    
+
                 <div class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Anterior</span>
                 </div>
-    
+
                 <!-- controles laterales -->
                 <div class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Siguiente</span>
-    
-    
+
+
                 </div>
-    
-    
-                
+
+
+
             </div>
-            <div class="col bg-light mx-0">
-                <div class="jumbotron my-2">
+            <div class="col-md-4 bg-light mx-0">
+                <div class="jumbotron my-3 mx-0">
                     <h1 class="display-6">Bienvenidos a mi web</h1>
                     <p>Esto es un jumbotron en Bootstrap</p>
 
                     <hr class="my-2">
                     <p>Identificate en la web</p>
-                    <a href=" #" class="btn btn-primary btn-lg" role="button" data-bs-toggle="modal" data-bs-target="#modal" >Login</a>
-                    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <a href=" #" class="btn btn-primary btn-lg" role="button" data-bs-toggle="modal"
+                        data-bs-target="#modal">Login</a>
+                    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <form>
@@ -167,7 +183,8 @@
                                             <label for="exampleInputEmail1" class="form-label">Email address</label>
                                             <input type="email" class="form-control" id="exampleInputEmail1"
                                                 aria-describedby="emailHelp">
-                                            <div id="emailHelp" class="form-text">We'll never share your email with anyone
+                                            <div id="emailHelp" class="form-text">We'll never share your email with
+                                                anyone
                                                 else.</div>
                                         </div>
                                         <div class="mb-3">
@@ -183,7 +200,8 @@
 
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
                                     <button type="button" class="btn btn-primary">Save changes</button>
                                 </div>
                             </div>
@@ -191,22 +209,97 @@
 
 
                     </div>
+
+                    <!-- collapse -->
+
+                    <a class="btn btn-success" data-bs-toggle="collapse" href="#informacion">
+                        Mostrar informacion
+                    </a>
+                    <div class="collapse" id="informacion">
+                        <div class="card card-body bg-dark text-white mt-3">
+                            <h5 class="card-title">Informacion</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- barra de progreso-->
+
+                    <div class="progress">
+                        <div id="barraprogreso" class="progress-bar progress-bar-striped progress-bar-animated"
+                            role="progressbar">
+                            <span class="sr-only"></span>
+                        </div>
+                    </div>
+
+                    <script>
+                        var contador=0;
+
+                        setInterval(function () {
+
+                            if (contador<100) {
+                                contador++;
+                                var barra=document.querySelector("#barraprogreso");
+                                barra.style.width=contador+"%";
+                                barra.textContent=contador+"%";
+
+                            }
+                        }, 1000);
+                    </script>
+
+                    <!-- tooltip -->
+                    <button type="button" class="btn-tool btn btn-danger mt-3" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Si das click sacaras una alerta">
+                        Alerta
+                    </button>
+
+                    <button type="button" class="btn-pop btn btn-lg btn-danger mt-3" data-bs-toggle="popover"
+                        data-bs-title="Popover title"
+                        data-bs-content="And here's some amazing content. It's very engaging. Right?">
+                        popover</button>
+
+
+                        <hr>
+
+                        <form action="" class="form-group">
+                            <div class="input-group ">
+                                <div class="input-group-prepend ">
+                                    <span class="input-group-text">Nombre</span>
+                                </div>
+                                <input type="text" name="nombre" id="nombre" class="form-control " placeholder="Pon tu nombre">
+                            </div>
+                            
+
+                            <label for="genero" class="form-label">Genero</label>
+                            <select name="genero" id="genero" class="form-control" >
+                                <option value="none">None</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                
+                            </select>
+
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email">
+                            <label for="contrasen" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="contrasen">
+
+                            <button type="submit" class="btn btn-success mt-3">Enviar</button>
+                            <button type="reset" class="btn btn-warning mt-3">Registrar</button>
+                        </form>
+
                 </div>
             </div>
-        </div>
-       
 
-        <!-- migas de pan-->
 
-        <div class="row col-md-8">
-            <div class="col-md-12 mt-2 ">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Desarrollo Web</a></li>
-                        <li class="breadcrumb-item"><a href="#">Componentes</a></li>
-                    </ol>
-                </nav>
+
+
+
+            <!-- migas de pan-->
+
+            <div class="row col-md-8">
+
                 <!-- alertas -->
                 <div class="alert alert-success alert-dismissible">
                     <strong>Incleible !! Te has registrado correctamente :)</strong>
@@ -225,49 +318,112 @@
                         Articulo nuevo
                     </a>
                 </p>
+                <!-- card -->
+                <div class="row col-md-12">
+                    <div class="card col mx-2">
+                        <img class="card-img-top img-fluid" src="https://placehold.co/300x200" alt="">
+                        <div class="card-body">
+                            <h3 class="card-title">Tarjeta 1</h3>
+                            <p class="card-text">
+                                Hola , entra a mi pagina web1
+                            </p>
+                            <a href="#" class="btn btn-primary">Entrar</a>
+                        </div>
+                    </div>
+                    <div class="card col mx-2">
+                        <img class="card-img-top img-fluid" src="https://placehold.co/300x200" alt="">
+                        <div class="card-body">
+                            <h3 class="card-title">Tarjeta 1</h3>
+                            <p class="card-text">
+                                Hola , entra a mi pagina web1
+                            </p>
+                            <a href="#" class="btn btn-dark">Entrar</a>
+                        </div>
+                    </div>
+                    <div class="card col mx-2">
+                        <img class="card-img-top img-fluid" src="https://placehold.co/300x200" alt="">
+                        <div class="card-body">
+                            <h3 class="card-title">Tarjeta 1</h3>
+                            <p class="card-text">
+                                Hola , entra a mi pagina web1
+                            </p>
+                            <a href="#" class="btn btn-warning">Entrar</a>
+                        </div>
+                    </div>
+
+
+                    <nav aria-label="pagination">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">&laquo;</a>
+                            </li>
+
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">&raquo;</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+
+                <!-- table -->
+
+                <table class="table table-hover my-5 ">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>
+                                Nombre
+                            </th>
+                            <th>
+                                Apellidos
+                            </th>
+                            <th>
+                                Edad
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            Juan
+                        </td>
+                        <td>
+                            Perez
+                        </td>
+                        <td>
+                            20
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Pedro
+                        </td>
+                        <td>
+                            Perez
+                        </td>
+                        <td>
+                            22
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Maria
+                        </td>
+                        <td>
+                            Perez
+                        </td>
+                        <td>
+                            25
+                        </td>
+
+                    </tr>
+                </table>
+
+
 
             </div>
-
-            <!-- card -->
-            <div class="row col-md-12">
-                <div class="card col mx-2">
-                    <img class="card-img-top img-fluid" src="https://placehold.co/300x200" alt="">
-                    <div class="card-body">
-                        <h3 class="card-title">Tarjeta 1</h3>
-                        <p class="card-text">
-                            Hola , entra a mi pagina web1
-                        </p>
-                        <a href="#" class="btn btn-primary">Entrar</a>
-                    </div>
-                </div>
-                <div class="card col mx-2">
-                    <img class="card-img-top img-fluid" src="https://placehold.co/300x200" alt="">
-                    <div class="card-body">
-                        <h3 class="card-title">Tarjeta 1</h3>
-                        <p class="card-text">
-                            Hola , entra a mi pagina web1
-                        </p>
-                        <a href="#" class="btn btn-dark">Entrar</a>
-                    </div>
-                </div>
-                <div class="card col mx-2">
-                    <img class="card-img-top img-fluid" src="https://placehold.co/300x200" alt="">
-                    <div class="card-body">
-                        <h3 class="card-title">Tarjeta 1</h3>
-                        <p class="card-text">
-                            Hola , entra a mi pagina web1
-                        </p>
-                        <a href="#" class="btn btn-warning">Entrar</a>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <!-- lateral-->
-
-
-
 
         </div>
 
@@ -281,13 +437,26 @@
 
 
 
+
+
     </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".btn-tool").tooltip();
+            $(".btn-pop").popover();
+            const popoverTriggerList=document.querySelectorAll('[data-bs-toggle="popover"]')
+            const popoverList=[...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+        })
+    </script>
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 </body>
 
 </html>
