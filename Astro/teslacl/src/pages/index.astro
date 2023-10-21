@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Logo from "../components/Logo.astro";
+import Header from "../components/Header.astro";
+import HeroSection from "../components/HeroSection.astro";
+import ModelY from "../components/ModelY.astro";
+import SectionSlot from "../components/SectionSlot.astro";
+---
+
+<Layout title="Tesla">
+	<main>
+		<Header />
+		<div
+			class="snap-y snap-mandatory relative w-screen h-screen overflow-auto scroll-m-10 overflow-x-hidden"
+		>
+			<div class="snap-start">
+				<SectionSlot title="Disfrute de Tesla" subtitle="Programe una prueba de conduccion" color="white" > 
+					<div slot="footer">
+						<a class="text-white border-[3px] border-white bg-white/5 blackdrop-blur-xl rounded font-sm px-12 py-2 inline-block 
+						hover:text-black hover:bg-white transition-colors duration-300" href="#"> Prueba de conduccion</a>
+					</div>
+				<video slot="background" class="object-center object-cover h-full w-full" autoplay muted loop src="/twvideo.mp4"></video>
+				</SectionSlot>
+			</div>
+			<div class="snap-start">
+				<ModelY />
+			</div>
+			<div class="snap-start">
+				<HeroSection />
+			</div>
+			<div class="snap-start">
+				<HeroSection />
+			</div>
+			<div class="snap-start">
+				<HeroSection />
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style></style>
