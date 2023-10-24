@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Plantilla</title>
+</head>
+<body>
+<header th:fragment="header" >
+    <h1 th:text="#{plantilla.title}"></h1>
+    <hr>
+    <div style="display: grid; grid-template-columns: repeat(2, 100px);">
+        <a href="/agregar">Crear personas</a>
+
+        <a href="/">Listar personas</a>
+    </div>
+    <br/>
+    <hr>
+
+</header>
+
+<footer th:fragment="footer">
+    <hr>
+    <p> [[#{plantilla.pie-pagina}]] &copy; 2023</p>
+    <hr>
+</footer>
+
+
+</body>
+</html>

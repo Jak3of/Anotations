@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos de la persona</title>
+</head>
+<body>
+<header th:replace="layout/plantilla::header"></header>
+    <h1>[[#{persona.crear}]]</h1>
+    <a th:href="@{/}">Regresar</a>
+    <hr>
+    <form action="#" th:action="@{/agregar}" th:object="${persona}" method="post">
+        <table>
+            <tr hidden>
+                <td>ID</td>
+                <td>
+                    <input type="text" name="idPersona" th:field="*{idPersona}" />
+                </td>
+            </tr>
+            <tr>
+                <td>Nombre</td>
+                <td><input type="text" th:field="*{nombre}" /> <br/>
+                    <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}" style="color: red">
+                        [[#{NotEmpty.persona.nombre}]]
+
+
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Apellido</td>
+                <td><input type="text" th:field="*{apellido}" />
+                    <br/>
+                    <span th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}" style="color: red"> Error apellido</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" th:field="*{email}" />
+                    <br/>
+                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color: red"> Error email</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Telefono</td>
+                <td><input type="text" th:field="*{telefono}" />
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Enviar" /></td>
+            </tr>
+        </table>
+    </form>
+<footer th:replace="layout/plantilla::footer"></footer>
+
+</body>
+</html>
