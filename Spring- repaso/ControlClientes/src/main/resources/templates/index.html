@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-    <head>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head th:replace="layout/plantilla::head">
         <title>Inicio</title>
         <meta charset="UTF-8">
     </head>
@@ -15,7 +15,7 @@
                     <th>Apellido</th>
                     <th>Email</th>
                     <th>Teléfono</th>
-                    <th colspan="2">Acciones</th>
+                    <th sec:authorize="hasRole('ROLE_ADMIN')" colspan="2">Acciones</th>
                 </tr>
                 <tr th:each="persona : ${personas}">
                     <td th:text="${persona.nombre}">Mostrar Nombre</td>
@@ -23,8 +23,8 @@
                     <td th:text="${persona.email}">Mostrar Email</td>
                     <td th:text="${persona.telefono}">Mostrar Teléfono</td>
                     <!-- lo inserta con query parametros -->
-                    <td><a th:href="@{/editar(idPersona=${persona.idPersona})}">modificar</a></td>
-                    <td><a th:href="@{/eliminar(idPersona=${persona.idPersona})}">Eliminar</a></td>
+                    <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/editar(idPersona=${persona.idPersona})}">modificar</a></td>
+                    <td sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/eliminar(idPersona=${persona.idPersona})}">Eliminar</a></td>
                 </tr>
             </table>
         </div>

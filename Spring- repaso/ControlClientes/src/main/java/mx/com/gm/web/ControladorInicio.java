@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import mx.com.gm.servicio.PersonaService;
 import mx.com.gm.domain.Persona;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -18,10 +20,14 @@ public class ControladorInicio {
     
     @Autowired
     private PersonaService personaService;
+
+
     
     @GetMapping("/")
-    public String inicio(Model model){
+    public String inicio(Model model, @AuthenticationPrincipal User user){
+        /* utilizamos authentication principal para inyectar al usuario autenticado */
         var personas = personaService.listarPersonas();
+        log.info("usuario autenticado: " + user);
         log.info("ejecutando el controlador Spring MVC");
         model.addAttribute("personas", personas);
         return "index";
