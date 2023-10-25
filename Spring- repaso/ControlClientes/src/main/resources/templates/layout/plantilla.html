@@ -12,6 +12,9 @@
         <a href="/agregar">Crear personas</a>
 
         <a href="/">Listar personas</a>
+        <form th:action="@{/logout}" method="POST">
+            <a href="#" onclick="this.parentNode.submit();"> Cerrar sesión</a>
+        </form>
     </div>
     <br/>
     <hr>
@@ -19,6 +22,11 @@
 </header>
 
 <footer th:fragment="footer">
+    <div>
+        <br/>
+        <a th:href="@{/(lang=es)}">ES</a>
+        <a th:href="@{/(lang=en)}">EN</a>
+    </div>
     <hr>
     <p> [[#{plantilla.pie-pagina}]] &copy; 2023</p>
     <hr>
