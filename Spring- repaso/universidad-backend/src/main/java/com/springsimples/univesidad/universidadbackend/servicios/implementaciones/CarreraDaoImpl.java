@@ -34,4 +34,10 @@ public class CarreraDaoImpl extends GenericoDaoImpl<Carrera, CarreraRepository> 
     public Iterable<Carrera> findCarrerasByCantidadAniosAfter(Integer cantidad) {
         return repository.findCarrerasByCantidadAniosAfter(cantidad);
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Iterable<Carrera> buscarCarrerasPorProfesorNombreYApellido(String nombre, String apellido) {
+        return repository.buscarCarrerasPorProfesorNombreYApellido(nombre, apellido);
+    }
 }

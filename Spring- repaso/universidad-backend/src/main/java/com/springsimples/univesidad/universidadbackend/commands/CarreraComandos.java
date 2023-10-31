@@ -1,4 +1,4 @@
-package com.springsimples.univesidad.universidadbackend;
+package com.springsimples.univesidad.universidadbackend.commands;
 
 import com.springsimples.univesidad.universidadbackend.modelo.entidades.Carrera;
 import com.springsimples.univesidad.universidadbackend.servicios.contratos.CarreraDao;
@@ -77,6 +77,9 @@ public class CarreraComandos implements CommandLineRunner {
 
 
 
+        /*List<Carrera> carrerasPorProfesor = (List<Carrera>) servicio.buscarCarrerasPorProfesorNombreYApellido("Jim", "Walmer");
+
+        carrerasPorProfesor.forEach(System.out::println);*/
 
 
     }

@@ -17,9 +17,16 @@ for (var i=0; i<nombres.length; i++){
 
     // elemento == console.log(data);
 
-lenguajes.forEach((lenguaje, index, data) => {
+lenguajes.forEach(
+    (lenguaje, index, data) => {
     console.log(index+" "+lenguaje);
 })
+
+// forEach(elemento, index, data)
+
+// index es la posicion del elemento 0-n 
+// data es el arreglo devuelto 
+// lenguaje es cada elemento del arreglo
 
 
 var experiencia = [[
@@ -48,9 +55,10 @@ for (let lenguaje of lenguajes){
 console.log(lenguajes.find(lenguaje => {
     return lenguaje == "js";
 }));
+
 console.log(lenguajes.findIndex(lenguaje => {
     return lenguaje == "js";
-}))
+}));
 
 console.log(edad.some(edad => {
     return edad > 20

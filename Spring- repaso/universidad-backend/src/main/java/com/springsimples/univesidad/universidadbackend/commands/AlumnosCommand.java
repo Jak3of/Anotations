@@ -1,4 +1,4 @@
-package com.springsimples.univesidad.universidadbackend;
+package com.springsimples.univesidad.universidadbackend.commands;
 
 import com.springsimples.univesidad.universidadbackend.modelo.entidades.Alumno;
 import com.springsimples.univesidad.universidadbackend.modelo.entidades.Carrera;

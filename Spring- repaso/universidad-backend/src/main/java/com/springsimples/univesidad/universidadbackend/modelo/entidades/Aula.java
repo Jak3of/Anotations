@@ -56,15 +56,14 @@ public class Aula implements Serializable {
 
     }
 
-    public Aula(Integer id, Integer nroAula, String medidas, Integer cantidadPupitres, Pizarron pizarron, LocalDateTime fechaAlta, LocalDateTime fechaModificacion) {
+    public Aula(Integer id, Integer nroAula, String medidas, Integer cantidadPupitres, Pizarron pizarron) {
         this.id = id;
         this.nroAula = nroAula;
         this.medidas = medidas;
         this.cantidadPupitres = cantidadPupitres;
         this.pizarron = pizarron;
-        this.fechaAlta = fechaAlta;
-        this.fechaModificacion = fechaModificacion;
     }
+
 
     @Override
     public boolean equals(Object o) {
