@@ -1,14 +1,17 @@
 package com.springsimples.univesidad.universidadbackend.modelo.entidades;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.Hibernate;
 
 import java.math.BigDecimal;
 import java.util.Set;
 
 @Getter
 @Setter
+@AllArgsConstructor
 @Entity
 @Table(name = "profesores")
 @PrimaryKeyJoinColumn(name = "persona_id")
@@ -54,7 +57,7 @@ public class Profesor extends Persona {
         return super.toString()+
                 "\tProfesor{" +
                 "sueldo=" + sueldo +
-                ", carreras=" + carreras +
+                ", carreras=" + carreras.toString() +
                 '}';
     }
 

@@ -20,7 +20,7 @@ public class Aula implements Serializable {
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "numero_aula", nullable = false)
+    @Column(name = "numero_aula", nullable = false,unique = true)
     private Integer nroAula;
 
     @Column(name = "medidas_mtsxmts", nullable = false)

@@ -1,12 +1,19 @@
 package com.springsimples.univesidad.universidadbackend.modelo.entidades;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Set;
 
+@Getter
+@Setter
+@AllArgsConstructor
 @Entity
 @Table(name = "carreras")
 public class Carrera implements Serializable {
@@ -47,13 +54,12 @@ public class Carrera implements Serializable {
 
     }
 
-    public Carrera(Integer id, String nombre, Integer cantidadMaterias, Integer cantidadAnios, LocalDateTime fechaAlta, LocalDateTime fechaModificacion) {
+    public Carrera(Integer id, String nombre, Integer cantidadMaterias, Integer cantidadAnios) {
         this.id = id;
         this.nombre = nombre;
         this.cantidadMaterias = cantidadMaterias;
         this.cantidadAnios = cantidadAnios;
-        this.fechaAlta = fechaAlta;
-        this.fechaModificacion = fechaModificacion;
+
     }
 
     @Override
