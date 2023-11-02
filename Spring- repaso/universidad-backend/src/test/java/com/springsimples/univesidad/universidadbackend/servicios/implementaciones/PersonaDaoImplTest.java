@@ -30,6 +30,7 @@ class PersonaDaoImplTest {
 
         //given
 
+        // mock para verifivar si se esta implementando correctamente
         personaDao.buscarPorNombreYApellido(anyString(), anyString());
 
         // then

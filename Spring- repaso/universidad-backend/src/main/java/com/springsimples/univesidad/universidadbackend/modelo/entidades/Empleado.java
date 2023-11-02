@@ -38,7 +38,10 @@ public class Empleado extends Persona {
 
     }
 
-    public Empleado(Integer id, String nombre, String apellidos, String dni, Direccion direccion, BigDecimal sueldo, TipoEmpleado tipoEmpleado) {
+    public Empleado(Integer id, String nombre, String apellidos,
+                    String dni, Direccion direccion,
+                    BigDecimal sueldo, TipoEmpleado tipoEmpleado) {
+
         super(id, nombre, apellidos, dni, direccion);
         this.sueldo = sueldo;
         this.tipoEmpleado = tipoEmpleado;
