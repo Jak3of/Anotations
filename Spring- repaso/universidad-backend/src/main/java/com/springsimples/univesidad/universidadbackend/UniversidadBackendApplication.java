@@ -15,8 +15,7 @@ import java.util.List;
 @SpringBootApplication
 public class UniversidadBackendApplication {
 
-	@Autowired
-	private AlumnoDao servicio;
+
 
 	public static void main(String[] args) {
 		String[] beanDefinitionNames = SpringApplication.run(UniversidadBackendApplication.class, args).getBeanDefinitionNames();
