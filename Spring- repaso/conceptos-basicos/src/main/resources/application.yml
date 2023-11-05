@@ -1,0 +1,18 @@
+# key = value
+
+# app.base.url=/app/home/service-url
+
+# yml utiliza estructura de datos JSON
+# https://www.baeldung.com/spring-boot-yaml
+app:
+    base:
+        url: /app-yml/home/service-url
+
+
+# bar.url.client=/app-bar/client/home
+# bar.url.customer=/app-bar/customer/home
+
+bar:
+  url:
+    client: /app-bar/client/home
+    customer: /app-bar/customer/home
