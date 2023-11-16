@@ -1,0 +1,23 @@
+body{
+    background: url('../img/cielo.jpg');
+    background-attachment: fixed;
+}
+
+#logo{
+    background: #ccc;
+}
+
+#menu ul li:hover{
+    background: #ccc;
+}
+
+.post .button-more{
+    background-color: white;
+    color: gray;
+
+}
+
+.submit{
+    background: white;
+    color: gray;
+}

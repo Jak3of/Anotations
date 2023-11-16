@@ -1,0 +1,22 @@
+body{
+    background: url('../img/hojas.jpg');
+    background-attachment: fixed;
+}
+
+#logo{
+    background: #235E3D;
+}
+
+#menu ul li:hover{
+    background: #235E3D;
+}
+
+.post .button-more{
+    background-color: #235E3D;
+    color: white;
+}
+
+.submit{
+    background: #235E3D;
+    color: white;
+}
