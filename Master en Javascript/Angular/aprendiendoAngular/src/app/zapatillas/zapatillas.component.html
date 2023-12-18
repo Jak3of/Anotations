@@ -1,0 +1,74 @@
+<h2> {{ title}} </h2>
+
+<!-- Añadir marcas -->
+
+<input type="text" [(ngModel)]="mi_marca"  />
+<p> {{mi_marca}}</p>
+
+<button (click)="addMarca()"> Añadir marca </button>
+
+<!-- Ver Marcas -->
+
+<ul>
+  <li *ngFor="let marca of zapatillasMarcas"> 
+    <h3> {{marca}} </h3>
+    <button (click)="borrarMarca(marca)"> Borrar </button>
+  </li>
+</ul>
+
+
+<!-- Seleccion de zapatilla -->
+
+<div *ngIf="(this.zapatillas.length > 0) " >
+
+    <h3> Seleccion de zapatilla </h3>
+
+    <!-- ngModel es para enlazar el valor seleccionado del select con la variable 'marcaSeleccionada' en el componente.
+     (change) escucha el evento de cambio en el select y llama a la función 'filtrarZapatillasPorMarca()' cuando ocurre un cambio. -->
+
+    <select [(ngModel)]="marcaSeleccionada" (change)="filtrarZapatillasPorMarca()">
+        <option value="Todas las marcas">Todas las marcas</option>
+        <option *ngFor="let zapatilla of zapatillasMarcas" [value]="zapatilla" >
+            {{zapatilla}}
+        </option>
+    </select>
+
+    <button (click)="getmarcaSeleccionada()"> Seleccionar </button>
+
+    <!-- lista de zapatillas segun la marca seleccionada -->
+    <div *ngIf="marcaSeleccionada !== ''">
+        <ul>
+          <li *ngFor="let zapatilla of filtrarZapatillasPorMarca()">
+            <!-- Contenido de cada zapatilla -->
+            <h2> {{zapatilla.nombre}} </h2>
+            <h3> {{zapatilla.marca}} </h3>
+            <h4> {{zapatilla.color}} </h4>
+            <h5> {{zapatilla.precio}} € <span *ngIf="zapatilla.precio < 80"> Oferta!</span> </h5>
+            <p> {{zapatilla.stock}} </p>
+
+          </li>
+        </ul>
+      </div>
+
+
+
+
+    
+
+
+</div>
+
+
+
+
+<!-- <ul>
+    
+    
+    <li *ngFor="let zapatilla of zapatillas">
+        <h3> {{zapatilla.nombre}} </h3>
+        <h4> {{zapatilla.marca}} </h4>
+        <h5> {{zapatilla.color}} </h5>
+        <h6> {{zapatilla.precio}} € <span *ngIf="zapatilla.precio < 80"> Oferta!</span> </h6>
+        <p> {{zapatilla.stock}} </p>
+    </li>
+</ul> -->

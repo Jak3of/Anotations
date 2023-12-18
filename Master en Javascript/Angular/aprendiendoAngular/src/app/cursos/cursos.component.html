@@ -1,0 +1,13 @@
+
+<h1> Componente de Cursos</h1>
+
+<div *ngIf="identificado; else noIdentificado" >
+    <h3> Estas identificado: Bienvenido {{ nombre }} </h3>
+    <button (click)="desconectar()"> Desconectar </button>
+</div>
+
+<ng-template #noIdentificado>
+    <h3> No estas identificado, pulsa el botón para identificarte </h3>
+    <input type="text" [(ngModel)]="nombre" />
+    <button (click)="identificarse()"> Conectar </button>
+</ng-template>

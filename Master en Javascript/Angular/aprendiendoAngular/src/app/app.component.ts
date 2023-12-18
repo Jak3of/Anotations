@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Configuracion } from './models/configuracion';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'aprendiendoAngular';
+  public title = 'Master en Javascript';
+  public description = 'Aprendiendo Angular';
+  public config;
+
+
+  constructor( ) {
+    this.config = Configuracion;
+    this.title = Configuracion.titulo;
+    this.description = Configuracion.descripcion;
+  }
+
 }

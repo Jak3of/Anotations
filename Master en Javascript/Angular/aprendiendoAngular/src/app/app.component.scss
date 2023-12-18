@@ -1,0 +1,58 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 20px;
+
+
+    .nav{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        a{
+            
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            border: 1px solid transparent;
+
+            &.active{
+                
+                font-weight: bold;
+                border: 1px solid #333;
+                
+
+                
+
+            }
+        }
+    }
+
+    
+    app-videojuego{
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: 20px;
+
+    }
+
+    app-zapatillas{
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: 20px;
+
+        
+    }
+
+}
