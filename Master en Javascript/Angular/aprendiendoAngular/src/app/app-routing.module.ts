@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 import { VideojuegoComponent } from './videojuego/videojuego.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import { ProfileComponent } from './profile/profile.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -11,6 +14,9 @@ const routes: Routes = [
   { path: 'videojuego', component: VideojuegoComponent },
   { path: 'cursos', component: CursosComponent },
   { path: 'cursos/:nombre', component: CursosComponent },
+  { path: 'contacto', component: ContactoComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'zapatillas' }
 ];
 

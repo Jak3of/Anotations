@@ -1,4 +1,14 @@
 export class Zapatilla {
+    
+    constructor( public nombre: string,
+        public marca: string,
+        public color: string,
+        public precio: number,
+        public stock: boolean) {
+
+
+    }
+
     /*
     public nombre: string;
     public marca: string;
@@ -16,12 +26,4 @@ export class Zapatilla {
     */
 
     // seteo de propiedades de la clase mas sencilla
-    constructor( public nombre: string,
-        public marca: string,
-        public color: string,
-        public precio: number,
-        public stock: boolean) {
-
-
-    }
 }

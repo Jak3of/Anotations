@@ -1,45 +1,54 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Zapatilla } from '../models/zapatilla';
+import { ZapatillaService } from '../service/zapatilla.service';
 
 @Component({
   selector: 'app-zapatillas',
   templateUrl: './zapatillas.component.html',
-  styleUrls: ['./zapatillas.component.scss']
+  styleUrls: ['./zapatillas.component.scss'],
+  providers: [ZapatillaService]
 })
-export class ZapatillasComponent {
+export class ZapatillasComponent implements OnInit {
 
   public title = 'Componente de Zapatillas';
 
-  public zapatillas: Array<Zapatilla>;
-  public nowZapatillas: Array<Zapatilla> ;
+  public zapatillas: Zapatilla[] = [];
   public mi_marca!: string;
 
   public marcaSeleccionada: string = "Todas las marcas";
 
+  
+
+
   public zapatillasMarcas: Array<string> = [
-    'Reebook',
-    'Adidas',
-    'Puma',
-    'New Balance',
-    'Vans'
   ]
 
-  constructor( ) {
-    this.zapatillas = [
-      new Zapatilla( 'Reebook Clasic', this.zapatillasMarcas[0], 'Rojo', 100, true ),
-      new Zapatilla( 'Adidas Clasic', this.zapatillasMarcas[1], 'Rojo', 60, true ),
-      new Zapatilla( 'Puma Clasic', this.zapatillasMarcas[2], 'Rojo', 100, true ),
-      new Zapatilla( 'New Balance Clasic', this.zapatillasMarcas[3], 'Rojo', 70, true ),
-      new Zapatilla( 'Vans Clasic', this.zapatillasMarcas[4], 'Rojo', 90, false ),
-    ];
-
-   
-
-    this.nowZapatillas = this.zapatillas;
-
+  constructor(public zapatillaService: ZapatillaService) {
 
     
     
+  }
+
+  ngOnInit() {
+    this.zapatillaService.getZapatillas().subscribe(
+      zapatillas => {
+        // iniciar todas las zapatillas
+        this.zapatillas = zapatillas;
+
+        // iniciar todas las marcas sin repeticiones
+        // si hubiera un endpoint lo podriamos obtener de ahi
+        zapatillas.forEach((zapatilla) => {
+          if (!this.zapatillasMarcas.includes(zapatilla.marca)) {
+            this.zapatillasMarcas.push(zapatilla.marca);
+          }
+        })
+        console.log(this.zapatillas);
+      },
+      error => console.log(error)
+    );
+
+
+
   }
 
   addMarca(){

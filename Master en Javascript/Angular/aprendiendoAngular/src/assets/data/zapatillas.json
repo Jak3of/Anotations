@@ -1,0 +1,23 @@
+[
+    {"nombre": "Air Max 1", "marca": "Nike", "color": "Rojo", "precio": 120, "stock": true},
+    {"nombre": "Stan Smith 1", "marca": "Adidas", "color": "Blanco", "precio": 75, "stock": false},
+    {"nombre": "Classic 1", "marca": "Reebok", "color": "Negro", "precio": 85, "stock": true},
+    {"nombre": "Air Max 2", "marca": "Nike", "color": "Azul", "precio": 130, "stock": false},
+    {"nombre": "Stan Smith 2", "marca": "Adidas", "color": "Negro", "precio": 80, "stock": true},
+    {"nombre": "Classic 2", "marca": "Reebok", "color": "Blanco", "precio": 90, "stock": false},
+    {"nombre": "Air Max 3", "marca": "Nike", "color": "Verde", "precio": 140, "stock": true},
+    {"nombre": "Stan Smith 3", "marca": "Adidas", "color": "Rojo", "precio": 85, "stock": false},
+    {"nombre": "Classic 3", "marca": "Reebok", "color": "Azul", "precio": 95, "stock": true},
+    {"nombre": "Air Max 4", "marca": "Nike", "color": "Negro", "precio": 150, "stock": false},
+    {"nombre": "Stan Smith 4", "marca": "Adidas", "color": "Azul", "precio": 90, "stock": true},
+    {"nombre": "Classic 4", "marca": "Reebok", "color": "Rojo", "precio": 100, "stock": false},
+    {"nombre": "Air Max 5", "marca": "Nike", "color": "Blanco", "precio": 160, "stock": true},
+    {"nombre": "Stan Smith 5", "marca": "Adidas", "color": "Negro", "precio": 95, "stock": false},
+    {"nombre": "Classic 5", "marca": "Reebok", "color": "Verde", "precio": 105, "stock": true},
+    {"nombre": "Air Max 6", "marca": "Nike", "color": "Rojo", "precio": 170, "stock": false},
+    {"nombre": "Stan Smith 6", "marca": "Adidas", "color": "Blanco", "precio": 100, "stock": true},
+    {"nombre": "Classic 6", "marca": "Reebok", "color": "Azul", "precio": 110, "stock": false},
+    {"nombre": "Air Max 7", "marca": "Nike", "color": "Negro", "precio": 180, "stock": true},
+    {"nombre": "Stan Smith 7", "marca": "Adidas", "color": "Rojo", "precio": 105, "stock": false}
+]
+
