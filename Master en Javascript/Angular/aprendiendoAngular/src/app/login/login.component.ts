@@ -17,6 +17,8 @@ export class LoginComponent {
   }
 
 
+  /* username: 'kminchelle',
+    password: '0lelplR', */
   login(loginForm: any): void {
     if (loginForm.valid) {
       this.user = loginForm.value;
