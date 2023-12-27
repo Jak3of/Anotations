@@ -1,0 +1,70 @@
+.container{
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+    h2{
+        margin-left: 20px;
+        margin-bottom: 20px;
+        font-size: 35px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        
+    }
+
+    ul{
+        padding-left: 10px;
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); //clamp( , , 300px) ;
+
+        grid-gap: 20px;
+        
+        li{
+
+
+
+            list-style: none;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+
+
+            img{
+                height: 300px;
+                width: 100%;
+                margin-bottom: 5px;
+                // cover
+                object-fit: cover;
+                
+            }
+
+            .name{
+                
+                font-size: 25px;
+                margin-bottom: 5px;
+                color: gray;
+
+            }
+
+            .description{
+                color: gray;
+                
+            }
+
+            .btn{
+                margin-top: 5px;
+                margin-bottom: 5px;
+                padding: 10px 20px;
+                background-color: rgb(53, 103, 164);
+                color: white;
+                border: 1px solid rgb(53, 103, 164);
+                border-radius: 5px;
+                
+            }
+        }
+    }
+}

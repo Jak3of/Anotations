@@ -1,1 +1,20 @@
-<p>projects works!</p>
+
+<div class="container">
+
+    <h2 class="title"> {{title}}</h2>
+
+    <ul>
+        <li class="project" *ngFor="let project of projects">
+            <img src="{{ getImage(project.image)}}" alt="" class="img-thumbnail" />
+            <h3 class="name">{{project.name}}</h3>
+            <p class="description">{{project.description}}</p>
+            <p class="year">{{project.year}}</p>
+            <p class="langs">{{project.langs}}</p>
+            <p class="category">{{project.category}}</p>
+
+            <button class="btn btn-primary" (click)="editProject(project)">Editar</button>
+            <button class="btn btn-danger" (click)="deleteProject(project._id)">Borrar</button>
+
+        </li>
+    </ul>
+</div>

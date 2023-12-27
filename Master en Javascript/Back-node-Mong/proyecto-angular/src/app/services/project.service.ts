@@ -19,7 +19,7 @@ export class ProjectService {
         return this._http.get(this.url+'getProjects');
     }
 
-    getProject(id: number): Observable<any>{
+    getProject(id: string): Observable<any>{
         return this._http.get(this.url+'getProject/'+id);
     }
 
@@ -29,7 +29,7 @@ export class ProjectService {
         return this._http.post(this.url+'saveProject', params, {headers});
     }
 
-    deleteProject(id : number): Observable<any>{
+    deleteProject(id : string): Observable<any>{
         let headers = { 'Content-Type': 'application/json' }
         return this._http.delete(this.url+'deleteProject/'+id, {headers});
     }
@@ -37,13 +37,13 @@ export class ProjectService {
     updateProject(project : Project): Observable<any>{
         let params = JSON.stringify(project);
         let headers = { 'Content-Type': 'application/json' }
-        return this._http.put(this.url+'updateProject/'+project.id, params, {headers});
+        return this._http.put(this.url+'updateProject/'+project._id, params, {headers});
     }
 
     updateImage(project : Project, image: File): Observable<any>{
         // params para enviar imagenes
         let params = JSON.stringify(project);
         let headers = { 'Content-Type': 'application/json' }
-        return this._http.put(this.url+'update-image/'+project.id, params, {headers});
+        return this._http.put(this.url+'update-image/'+project._id, params, {headers});
     }
 }

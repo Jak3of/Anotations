@@ -1,4 +1,3 @@
-
 <div class="container">
     <h2> {{title}}</h2>
 
@@ -40,11 +39,18 @@
             <input type="file" class="form-control" id="image" placeholder="Subir imagen" name="image" (change)="fileChangeEvent($event)" >
         </div>
 
+
+        <!-- Imagen cargada -->
+
+        <div >
+            <img [src]="getImage(project.image)"  class="img-fluid" alt="Responsive image">
+        </div>
+
         
 
         <span class="text-message-api" *ngIf="message">{{message}}</span>
 
-        <button type="submit" class="btn btn-success" [disabled]="!projectForm.form.valid">Guardar</button>
+        <button type="submit" class="btn btn-success" [disabled]="!projectForm.form.valid">Actualizar</button>
 
     </form>
 </div>

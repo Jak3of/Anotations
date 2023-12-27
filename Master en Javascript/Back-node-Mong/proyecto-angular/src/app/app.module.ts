@@ -12,6 +12,8 @@ import { CreateComponent } from './components/create/create.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 import { ProjectService } from './services/project.service';
+import { UploadService } from './services/upload.service';
+import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ProjectService } from './services/project.service';
     ProjectsComponent,
     CreateComponent,
     ContactComponent,
-    ErrorComponent
+    ErrorComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { ProjectService } from './services/project.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ ProjectService ],
+  providers: [ ProjectService, UploadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

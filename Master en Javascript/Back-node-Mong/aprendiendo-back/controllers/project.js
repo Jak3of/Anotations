@@ -1,6 +1,7 @@
 'use strict'
 
 var Project=require('../models/project');
+var path=require('path');
 
 var fs=require('fs');
 
@@ -144,7 +145,23 @@ var controller={
                 error: error.message
             });
         }
+    },
+    getImageFile: function (req, res) {
+        if(req.params.image!='null'){
+            console.log(req.params.image);
+            var path_image='./uploads/'+req.params.image;
+            if (fs.existsSync(path_image)) {
+                return res.sendFile(path.resolve(path_image));
+            } else {
+                return res.status(404).json({
+                    message: 'La imagen no existe'
+                });
+            }
+        } else {
+            return res.sendFile(path.resolve('./uploads/unknown.jpeg'));
+        }
     }
+    
     
 };
 
