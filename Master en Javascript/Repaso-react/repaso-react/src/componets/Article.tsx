@@ -7,29 +7,34 @@ type Params  = {
 }
 
 const Article = ({title, code, comentar, comentario}: Params) => {
+    
+    const codeStyle : React.CSSProperties = { 
+        background: "#333", 
+        color: "white",
+        padding: "20px",
+        whiteSpace: "pre-wrap",
+        textAlign: "start", 
+        display: "block", 
+        margin: "0 auto",
+        position: "relative"}
+    
+    const btncopy : React.CSSProperties = {
+        margin: "0 auto",
+         display: "block",
+         position: "absolute",
+         top: "5px",
+         right: "5px"}
+
     return (
         <div>
             <h2>{title}</h2>
             <code 
-            style={{ 
-                background: "#333", 
-                color: "white",
-                padding: "20px",
-                whiteSpace: "pre-wrap",
-                textAlign: "start", 
-                display: "block", 
-                margin: "0 auto",
-                position: "relative"}}>
+            style={codeStyle}>
                  {code.map((code) => {
                     return  code +( (code != code[code.length - 1])?  "\n": "") })
                  } 
                  <button onClick={() => navigator.clipboard.writeText(code.join("\n"))} 
-                 style={{
-                    margin: "0 auto",
-                     display: "block",
-                     position: "absolute",
-                     top: "5px",
-                     right: "5px"}}>Copiar</button>
+                 style={btncopy}>Copy</button>
                  </code>
             <h3>{comentar}</h3>
             <p> {comentario}</p>
