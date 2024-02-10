@@ -1,5 +1,5 @@
-.env
-/python/env/
+**/.env
+**/python/env/
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -31,5 +31,28 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+
+# Ignorar carpetas generadas por Angular CLI en cualquier nivel dentro de proyectos
+**/node_modules/
+**/dist/
+**/tmp/
+
+# Ignorar archivos de configuración específicos de usuario en cualquier nivel dentro de proyectos
+**/.angular-cli.json
+
+# Ignorar archivos de configuración de Visual Studio Code
+**/.vscode/
+
+# Ignorar archivos de configuración de WebStorm
+**/.idea/
+
+# Ignorar carpetas y archivos generados por Composer
+**/vendor/
+
+# Ignorar archivos generados por Laravel
+**/storage/
+
+# Ignorar archivos de configuración de Symfony
+**/var/
+**/bin/
+
