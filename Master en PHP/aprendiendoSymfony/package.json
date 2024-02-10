@@ -1,0 +1,33 @@
+{
+    "devDependencies": {
+        "@babel/core": "^7.17.0",
+        "@babel/plugin-syntax-jsx": "^7.23.3",
+        "@babel/preset-env": "^7.23.9",
+        "@babel/preset-react": "^7.23.3",
+        "@symfony/webpack-encore": "^4.6.1",
+        "autoprefixer": "^10.4.17",
+        "core-js": "^3.23.0",
+        "postcss": "^8.4.35",
+        "postcss-loader": "^7.3.4",
+        "regenerator-runtime": "^0.13.9",
+        "sass": "^1.70.0",
+        "sass-loader": "^14.0.0",
+        "tailwindcss": "^3.4.1",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-notifier": "^1.15.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {
+        "inter": "^2.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}

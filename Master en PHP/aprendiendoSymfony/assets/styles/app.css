@@ -1,0 +1,18 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/*@import 'tailwindcss/dist/base.css';
+@import 'tailwindcss/dist/components.css';
+@import 'tailwindcss/dist/utilities.css';*/
+
+/*@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/
+/* app.css */
+
+@import url('https://rsms.me/inter/inter.css');
+
+/* ... tus estilos adicionales aquí ... */
+

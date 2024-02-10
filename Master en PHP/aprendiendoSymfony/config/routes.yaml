@@ -1,0 +1,30 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+index:
+    path: /inicio
+    controller: App\Controller\HomeController::index
+
+animales:
+    path: /animales
+    controller: App\Controller\HomeController::animales
+
+nombre:
+    path: /nombre/{nombre}/{apellido}
+    controller: App\Controller\HomeController::nombre
+    defaults: { nombre: 'pepito' , apellido: 'perez'}
+    methods: [GET, POST]
+    requirements:
+        nombre: '[a-zA-Z ]+'
+        apellido: '[a-zA-Z ]+'
+
+
+redirigir:
+    path: /redirigir
+    controller: App\Controller\HomeController::redirigir
+
+
+

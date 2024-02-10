@@ -1,0 +1,15 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block body %}
+    <h1>{{ title }}</h1>
+
+    <h2> Lista de Animales </h2>
+
+    {% for animal in animales %}
+        <li> {{ animal }} </li>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Mi sitio web{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+            <!-- En tu archivo HTML -->
+            
+
+        {{ encore_entry_link_tags('app') }}
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    
+    </head>
+    <body>
+        
+
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+
+        <script src="{{ asset('build/react_app.js') }}"></script>
+
+        {% block javascripts %}{% endblock %}
+            {{ encore_entry_script_tags('app') }}
+    </body>
+</html>
