@@ -1,0 +1,21 @@
+
+.headera:hover{
+    background: #ccc;
+    color: #000 !important;
+    font-weight: bold;
+    transition: all 0.3s ease;
+
+    
+}
+
+.headera{
+    display: block;
+    width: 100px;
+    padding: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 auto;
+}

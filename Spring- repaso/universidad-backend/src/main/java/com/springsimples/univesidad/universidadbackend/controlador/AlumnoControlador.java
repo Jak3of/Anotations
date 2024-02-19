@@ -16,19 +16,20 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/alumnos")
-public class AlumnoControlador {
+public class AlumnoControlador extends PersonaController {
 
-    private final PersonaDao alumnoDao;
+
 
     private final CarreraDao carreraDao;
 
     @Autowired
     public AlumnoControlador(@Qualifier("alumnoDaoImpl") PersonaDao alumnoDao, CarreraDao carreraDao) {
-        this.alumnoDao = alumnoDao;
+        super(alumnoDao);
+        nombreEntidad = "alumno";
         this.carreraDao = carreraDao;
     }
 
-    @GetMapping
+    /*@GetMapping
     public List<Persona> obtenerAlumnos(){
         List<Persona> alumnos = (List<Persona>) alumnoDao.findAll();
         if (alumnos.isEmpty()){
@@ -50,14 +51,14 @@ public class AlumnoControlador {
     @PostMapping
     public Persona crearAlumno(@RequestBody Persona alumno){
         return alumnoDao.save(alumno);
-    }
+    }*/
 
     @PutMapping("/{id}")
     public Persona actualizarAlumno( @PathVariable Integer id, @RequestBody Persona alumno){
 
         Persona alumnoUpdate = null;
 
-        Optional<Persona> oAlumno = alumnoDao.findById(id);
+        Optional<Persona> oAlumno = service.findById(id);
 
         if (!oAlumno.isPresent()){
             throw new BadRequestException(String.format("El alumno con id %d no existe", id));
@@ -67,10 +68,10 @@ public class AlumnoControlador {
         alumnoUpdate.setNombre(alumno.getNombre());
         alumnoUpdate.setApellidos(alumno.getApellidos());
         alumnoUpdate.setDireccion(alumno.getDireccion());
-        return alumnoDao.save(alumnoUpdate);
+        return service.save(alumnoUpdate);
     }
 
-    @DeleteMapping("/{id}")
+    /*@DeleteMapping("/{id}")
     public void eliminarAlumno(@PathVariable Integer id){
 
         Optional<Persona> oAlumno = alumnoDao.findById(id);
@@ -79,12 +80,12 @@ public class AlumnoControlador {
         }
         alumnoDao.deleteById(id);
         System.out.println( "Alumno con id " + id +"  eliminado");
-    }
+    }*/
 
     @PutMapping("/{id}/carrera/{idCarrera}")
     public Persona asignarCarreraAlumno(@PathVariable Integer id, @PathVariable Integer idCarrera){
 
-        Optional<Persona> oAlumno = alumnoDao.findById(id);
+        Optional<Persona> oAlumno = service.findById(id);
         if (!oAlumno.isPresent()){
             throw new BadRequestException(String.format("El alumno con id %d no existe", id));
         }
@@ -100,7 +101,7 @@ public class AlumnoControlador {
         // ((Alumno)alumno) se llama para convertir el objeto de tipo Persona a un objeto de tipo Alumno
         ((Alumno)alumno).setCarrera(carrera);
 
-        return alumnoDao.save(alumno);
+        return service.save(alumno);
     }
 
 
