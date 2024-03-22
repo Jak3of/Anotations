@@ -1,0 +1,22 @@
+html , body {
+    background: #21232A;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1,3rem;
+    padding: 70px;
+
+}
+
+.btn{
+
+    padding: 15px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-right: 4px;
+    
+}
+
+.btn:hover{
+    opacity: 0.8;
+    
+}

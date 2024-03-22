@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pr_Test en <FisrtApp/> debe de hacer match con el snapshot 1`] = `
+<div>
+  <h1>
+    Hola soy Vegeta
+  </h1>
+  <p>
+    insecto
+  </p>
+  <p>
+    Nelson
+  </p>
+</div>
+`;
