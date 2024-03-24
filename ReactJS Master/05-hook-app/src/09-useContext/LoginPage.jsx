@@ -29,7 +29,7 @@ export const LoginPage = () => {
     return (
         <>
             <div>LoginPage</div>
-            <p>Bienvenido {user?.name}</p>
+            <p aria-label="bienvenida" >Bienvenido {user?.name}</p>
             <button
                 onClick={() => onClick() }
                 className="btn btn-primary">Set user</button>

@@ -29,8 +29,8 @@ export const MultipleCustomHooks = () => {
                 />
             }
 
-            <button className="btn btn-primary mr-3" onClick={ () => counter > 1 ?  decrement(1) : 0 }>Prev</button>
-            <button className="btn btn-primary" onClick={ () => increment(1) }>Next</button>
+            <button disabled={ isLoading} className="btn btn-primary mr-3" onClick={ () => counter > 1 ?  decrement(1) : 0 }>Prev</button>
+            <button disabled={ isLoading} className="btn btn-primary" onClick={ () => increment(1) }>Next</button>
 
         </>
     )
